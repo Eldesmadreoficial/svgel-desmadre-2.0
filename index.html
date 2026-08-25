@@ -367,7 +367,7 @@
 
   <div class="age-gate" id="ageGate">
     <div class="age-box">
-      <img src="assets/logo.jpg" alt="Logo de Ęł Ɗə§mąɗrə">
+      <img src="assets/bienvenido.png" alt="Logo de Ęł Ɗə§mąɗrə">
       <h1>21+ 😈</h1>
       <p>
         Este espacio es para mayores de 21 años.
@@ -399,15 +399,15 @@
 
         <div class="hero-buttons">
           <a class="btn btn-primary" href="https://t.me/+-NrSU5KCQZliOWFh" target="_blank" rel="noopener">
-            💜 Entrar al grupo
+            💜 Entrar al Grupo
           </a>
           <a class="btn btn-secondary" href="https://t.me/eldesmadrepr" target="_blank" rel="noopener">
-            🔮 Canal oficial
+            🔮 CANAL Oficial
           </a>
         </div>
       </div>
 
-      <div class="logo-wrap">
+      <div class="logo.png">
         <img class="logo" src="assets/logo.jpg" alt="Ęł Ɗə§mąɗrə — Comunidad Magia Caos Puerto Rico">
       </div>
     </div>
@@ -438,7 +438,7 @@
           </p>
           <div class="stats">
             <span class="stat">🇵🇷 Puerto Rico</span>
-            <span class="stat">🍰 Est. 2023</span>
+            <span class="stat">🍰 Est. 2015</span>
             <span class="stat">👥 258 miembros</span>
             <span class="stat">🚫 Cero nopor</span>
           </div>
@@ -451,12 +451,12 @@
           <div class="card-top">
             <div class="icon">🔮</div>
             <div>
-              <h3>Canal oficial</h3>
+              <h3>Canal Oficial</h3>
               <span style="color:#a99bab">Ęł Ɗə§mąɗrə 100ﾒ35</span>
             </div>
           </div>
           <p>
-            Nuestro canal oficial para avisos, novedades y contenido de la
+            Nuestro Canal Oficial para avisos, novedades y contenido de la
             comunidad. Síguelo para no perderte las actualizaciones.
           </p>
           <div class="stats">
@@ -499,7 +499,7 @@
 
     <section class="section">
       <div class="cta">
-        <h2>Siempre vuelven 🫶🏻</h2>
+        <h2>Siempre vuelven ♥</h2>
         <p>
           Si ya conoces Ęł Ɗə§mąɗrə, sabes de qué hablamos.
           Si eres nuevo, este es tu momento para entrar al refugio.
@@ -509,7 +509,7 @@
             🇵🇷 Entrar a la comunidad
           </a>
           <a class="btn btn-secondary" href="https://t.me/eldesmadrepr" target="_blank" rel="noopener">
-            🔮 Ver canal oficial
+            🔮 Ver Canal Oficial
           </a>
         </div>
       </div>
@@ -520,9 +520,20 @@
     <strong>Ęł Ɗə§mąɗrə 2.0</strong> · Comunidad Puerto Rico · Est. 2023
     <br><br>
     21+ · CERO NOPOR · Magia · Caos · Comunidad
+    <br><br>
+    <div style="font-size: 13px; opacity: 0.85; border-top: 1px solid rgba(231,184,90,0.2); padding-top: 15px; margin-top: 15px;">
+      © 2023-2026 <strong>Ęł Ɗə§mąɗrə 2.0</strong>. Todos los derechos reservados.
+      <br>
+      Queda estrictamente prohibida la reproducción, copia o distribución total o parcial del código y contenidos de este sitio web sin autorización expresa.
+      <br><br>
+      <strong>Propietaria del Grupo y Canal:</strong> ShiiPaa
+      <br>
+      <strong>Desarrollo y Diseño Web:</strong> Sr. Juan Bello
+    </div>
   </footer>
 
   <script>
+    // Control de Age Gate (Verificación de edad)
     function enterSite(){
       localStorage.setItem("desmadre21", "yes");
       document.getElementById("ageGate").classList.add("hidden");
@@ -535,6 +546,22 @@
     if(localStorage.getItem("desmadre21") === "yes"){
       document.getElementById("ageGate").classList.add("hidden");
     }
+
+    // Protección anti-copia básica (Bloqueo de clic derecho y atajos de teclado)
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      // Bloquea F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+S
+      if (
+        e.keyCode === 123 || 
+        (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83)) || 
+        (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74))
+      ) {
+        e.preventDefault();
+      }
+    });
   </script>
 
 </body>
